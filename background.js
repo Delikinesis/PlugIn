@@ -8,7 +8,7 @@ let model; // Variable to store the loaded model
 // Function to load the AI model
 async function loadModel() {
   // Load your model using TensorFlow.js
-  model = await tf.loadLayersModel('path/to/your/model.json'); // Update with the correct path to your saved model
+  model = await tf.loadLayersModel('PlugIn/model'); // Update with the correct path to your saved model
   console.log('Model loaded successfully');
 }
 
