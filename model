@@ -9,8 +9,8 @@ path = kagglehub.dataset_download("birdy654/cifake-real-and-ai-generated-synthet
 print("Path to dataset files:", path)
 
 # Define paths to your image datasets
-train_data_dir = '/root/.cache/kagglehub/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images/versions/3/train'  # Replace with your path
-validation_data_dir = '/root/.cache/kagglehub/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images/versions/3/test'  # Replace with your path
+train_data_dir = '/root/.cache/kagglehub/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images/versions/3/train'  
+validation_data_dir = '/root/.cache/kagglehub/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images/versions/3/test'  
 
 # Data preprocessing and augmentation
 train_datagen = ImageDataGenerator(
