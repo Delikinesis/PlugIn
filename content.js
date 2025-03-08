@@ -1,9 +1,9 @@
-// Function to send image data to background script
+
 function sendImageToBackground(imageData) {
   chrome.runtime.sendMessage({ type: "image", data: imageData });
 }
 
-// Function to process images on the page
+
 function processImages() {
   const images = document.querySelectorAll("img");
   images.forEach(img => {
@@ -17,5 +17,5 @@ function processImages() {
   });
 }
 
-// Run the image processing function
+
 processImages();
