@@ -1,0 +1,28 @@
+!pip install requests
+
+import requests
+import os
+import base64
+
+def send_image_for_training(image_path, api_endpoint):
+    """
+    Args:
+        image_path: The path to the generated image.
+        api_endpoint: The URL of the API endpoint to send the image to.
+    """
+
+    with open(image_path, "rb") as image_file:
+        encoded_image = base64.b64encode(image_file.read()).decode("utf-8")
+
+    data = {
+        "image": encoded_image,
+        "label": "AI-generated",  # Label the image as AI-generated
+        "source": "PlatformName"  # Replace with the platform's name
+    }
+
+    try:
+        response = requests.post(api_endpoint, json=data)
+        response.raise_for_status()  # Raise an exception for bad responses
+        print(f"Image sent successfully: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"Error sending image: {e}")
