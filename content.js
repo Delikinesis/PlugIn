@@ -1,4 +1,3 @@
-
 function sendImageToBackground(imageData) {
   chrome.runtime.sendMessage({ type: "image", data: imageData });
 }
